@@ -1,0 +1,39 @@
+#:kivy 1.0
+
+<RootWidget>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        BoxLayout:
+            padding: 0, 0, 0, 20
+            TextInput:
+                id: a
+
+            Label:
+                text: "x^2 +"
+
+            TextInput:
+                id: b
+
+            Label:
+                text: "x +"
+
+            TextInput:
+                id: c
+
+            Label:
+                text: "= 0"
+
+        Button:
+            text: 'Решить уравнение'
+            on_press:
+                root.solve()
+
+        Label:
+            id: d
+            text: ''
+
+        Label:
+            id: x
+            text: ''
