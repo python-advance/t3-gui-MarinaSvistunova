@@ -1,0 +1,16 @@
+#:kivy 1.11.1
+
+<Button>:
+    background_color: [0, 0, 0, 1]
+    color: [0, 0, 0, 0]
+
+<RootWidget>:
+    cols: 3
+    spacing: 5
+
+    canvas.before:
+        Color:
+            rgba: 0.92, 0.44, 0.84, 0.4
+        Rectangle:
+            pos: self.pos
+            size: self.size
