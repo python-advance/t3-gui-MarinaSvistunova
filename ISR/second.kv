@@ -1,0 +1,50 @@
+#:kivy 1.11.1
+
+<RootWidget>:
+    GridLayout:
+        cols: 9
+        pos_hint: {'x':.0, 'y':.9}
+        size_hint: 1, 0.1
+
+        Widget
+        Widget
+        Widget
+
+        Button:
+            text: '<'
+            on_press:
+                root.down()
+
+        TextInput:
+            id: num_col
+            input_filter: 'int'
+            text: '0'
+
+        Button:
+            text: '>'
+            on_press:
+                root.up()
+
+        Widget
+        Widget
+        Widget
+
+    GridLayout:
+        size_hint: 1, 0.6
+        pos_hint: {'x':.0, 'y':.3}
+        id: matrix
+        spacing: 2
+        padding: 5
+
+    Button:
+        text: 'Решить систему'
+        size_hint: 1, 0.1
+        pos_hint: {'x':.0, 'y':.2}
+        on_press:
+            root.solve()
+
+    Label:
+        id: answer
+        size_hint: 1, 0.2
+        pos_hint: {'x':.0, 'y':.0}
+        text: ''
